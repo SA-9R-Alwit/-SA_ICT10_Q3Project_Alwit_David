@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+    <title>OB Montessori Intrams | Sign Up</title>
+    <style>
+        body { background-color: #000; color: #fff; font-family: 'Arial Black', sans-serif; min-height: 100vh; display: flex; flex-direction: column; align-items: center; }
+        .nav-custom { width: 100%; padding: 20px; text-align: center; border-bottom: 1px solid #333; margin-bottom: 50px; }
+        .nav-custom a { color: #888; text-decoration: none; margin: 0 15px; text-transform: uppercase; font-size: 0.8rem; transition: 0.3s; }
+        .nav-custom a:hover, .nav-custom a.active { color: #fff; text-shadow: 0 0 10px #fff; }
+        .account-card { background: rgba(255, 255, 255, 0.05); border: 2px solid rgba(255, 255, 255, 0.2); border-radius: 20px; padding: 2.5rem; width: 100%; max-width: 450px; backdrop-filter: blur(15px); }
+        .form-control { background-color: #111 !important; color: white !important; border: 1px solid #444 !important; padding: 12px; margin-bottom: 10px; }
+        .btn-signup { background-color: #ffffff; color: #000; font-weight: 900; text-transform: uppercase; padding: 12px; border: none; width: 100%; border-radius: 5px; }
+        .rules-container { margin-top: 25px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); font-family: 'Arial', sans-serif; font-size: 0.75rem; color: #bbb; text-align: left; }
+    </style>
+</head>
+<body>
+    <nav class="nav-custom">
+        <a href="index.html" class="active">Sign Up</a>
+        <a href="checker.html">Team Checker</a>
+        <a href="rosters.html">Rosters</a>
+    </nav>
+
+    <div class="account-card">
+        <h3 class="text-center">SIGN UP</h3>
+        <p class="text-center text-secondary small mb-4">OB Montessori Portal</p>
+        <input type="email" id="email" class="form-control" placeholder="Email (@obmontessori.edu.ph)">
+        <input type="text" id="username" class="form-control" placeholder="Username">
+        <input type="password" id="password" class="form-control" placeholder="Password">
+        <button py-click="account_creation" class="btn-signup mt-3">Create Account</button>
+        <div id="output" class="mt-3 text-center"></div>
+        <div class="rules-container">
+            <b>RULES:</b>
+            <ul class="list-unstyled mt-2">
+                <li>✅ @obmontessori.edu.ph domain only</li>
+                <li>✅ Username: Min 7 characters</li>
+                <li>✅ Password: Min 10 chars, 1 letter, 1 number</li>
+            </ul>
+        </div>
+    </div>
+    <py-script src="main.py"></py-script>
+</body>
+</html>
